@@ -19,6 +19,7 @@ from base64 import b64encode
 import plotly.graph_objects as go
 import io
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 df = pd.read_csv("/content/adult.csv")
 df = df.rename(columns={'marital.status': 'marital_status'})
 min_age = df['age'].min()
