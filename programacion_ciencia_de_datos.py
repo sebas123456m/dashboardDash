@@ -15,7 +15,7 @@ import plotly.graph_objects as go
 import io
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
-df = pd.read_csv("https://github.com/sebas123456m/dashboardDash/blob/d0d727180942145d1c167626c5930abb957199ac/adult.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/sebas123456m/dashboardDash/blob/d0d727180942145d1c167626c5930abb957199ac/adult.csv", sep=",") 
 df = df.rename(columns={'marital.status': 'marital_status'})
 min_age = df['age'].min()
 max_age = df['age'].max()
