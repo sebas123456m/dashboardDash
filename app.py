@@ -199,4 +199,4 @@ def update_ocupacion_graph(ocupacion_value):
 
 # Ejecutar la aplicación
 if __name__ == '__main__':
-    app.run_server(host='0.0.0.0', port=8050, debug=True)
+    app.run_server(host='0.0.0.0', port=int(os.environ.get("PORT", 8050)), debug=True)
